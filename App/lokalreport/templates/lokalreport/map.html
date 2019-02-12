@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "lokalreport/base.html" %}
+<head><title>List</title></head>
+
+{% block content %}
+{% for posts in posts %}
+<body>
+
+<center>
+
+<div>
+        <h2>{{ posts.Title }}</h2>
+        <video width="320" height="240" controls>
+            <source src="{{posts.Videolink}}">
+            Your browser does not support the video tag.
+        </video>
+        <p>published:{{posts.Upload_Time}}</p>
+        <p>{{posts.Teaser|linebreaksbr}}</p>
+
+</div>
+{% endfor %}
+</center>
+</body>
+
+{% endblock %}
+</html>
+

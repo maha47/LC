@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.22674560546875,
+          26.82407078047018
+        ]
+      },
+      "properties": {
+    "name": "null island"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.91387939453125,
+          32.324275588876574
+        ]
+      },
+      "properties": {
+    "name": "Testmarker"}
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.39825439453125,
+          46.619261036171515
+        ]
+      },
+      "properties": {
+    "name": "Tütata"}
+    }
+  ]
+}
