@@ -11,16 +11,17 @@ from django.http import JsonResponse
 
 
 def post_list(request):
-    posts = Post.objects.all().order_by('Upload_Time')
+    posts = Post.objects.all().order_by('-Upload_Time')
+
     return render(request, 'lokalreport/map.html', {'posts': posts})
 
 
 
 
 def index(request):
+    posts = Post.objects.all()
 
-
-    return render(request, 'lokalreport/index.html')
+    return render(request, 'lokalreport/index.html', {'posts': posts})
 
 def map(request):
     return render(

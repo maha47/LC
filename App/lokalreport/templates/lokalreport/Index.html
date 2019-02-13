@@ -15,7 +15,7 @@
      <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
    crossorigin=""></script>
-
+<script src="https://raw.github.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.min.js"></script>
     <script src="static/jquery-2.1.1.min.js"></script>
 </head>
 
@@ -29,12 +29,12 @@
         <h2>Welcome to the Java Test</h2>
     </div>
 
-
+{% for posts in posts %}
  <div id="mapid"></div>
 
 <script src="static/map1.js"></script>
 
 </body>
-
+{% endfor %}
 {% endblock %}
 </html>

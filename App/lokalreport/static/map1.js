@@ -4,7 +4,7 @@
 
 
 var mymap = L.map('mapid', {
-    center: L.latLng(35.99404, 39.75621),
+    center: L.latLng(-5.99404, 28.75621),
     zoom: 5
 });
 
@@ -35,7 +35,7 @@ var data ={
       },
       "properties": {
     "name": "null island",
-        "vidsrc": "https://www.youtube.com/watch?v=BS9Y7ozXa60&list=PLiHzu4i2Hsb1tB5CZUgKPodPDUGyi9vFb"}
+        "vidsrc": "https://www.youtube.com/embed/BS9Y7ozXa60"}
     },
     {
       "type": "Feature",
@@ -48,7 +48,7 @@ var data ={
       },
       "properties": {
     "name": "Testmarker",
-        "vidsrc": "https://www.youtube.com/watch?v=BS9Y7ozXa60&list=PLiHzu4i2Hsb1tB5CZUgKPodPDUGyi9vFb"}
+        "vidsrc": "https://www.youtube.com/embed/BS9Y7ozXa60"}
     },
     {
       "type": "Feature",
@@ -61,17 +61,21 @@ var data ={
       },
       "properties": {
     "name": "T�tata",
-        "vidsrc": "https://www.youtube.com/watch?v=BS9Y7ozXa60&list=PLiHzu4i2Hsb1tB5CZUgKPodPDUGyi9vFb"}
+        "vidsrc": "https://www.youtube.com/embed/BS9Y7ozXa60"}
     }
   ]
 }
 
-var customPopup = "<h1>'+feature.properties.name+'</h1>, <p>'+feature.properties.vidsrc+'</p>'";
+
+
+var customOptions =
+        {
+        'maxWidth': '560',
+        'className' : 'custom'
+        }
 
 var layerGroup = L.geoJSON(data, {
   onEachFeature: function (feature, layer) {
-    layer.bindPopup(customPopup);
+    layer.bindPopup('<h1>'+feature.properties.name+'</h1><p><iframe width="560" height="315" src='+feature.properties.vidsrc+' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>', customOptions);
   }
 }).addTo(mymap);
-
-//'<h1>'+feature.properties.name+'</h1>, <p>'+feature.properties.vidsrc+'</p>'
