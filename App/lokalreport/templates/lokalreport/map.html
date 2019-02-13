@@ -8,12 +8,11 @@
 
 <center>
 
-<div>
+<div id="content">
         <h2>{{ posts.Title }}</h2>
-        <video width="320" height="240" controls>
-            <source src="{{posts.Videolink}}">
-            Your browser does not support the video tag.
-        </video>
+<iframe width="560" height="315" src="{{posts.Videolink}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
         <p>published:{{posts.Upload_Time}}</p>
         <p>{{posts.Teaser|linebreaksbr}}</p>
 
@@ -24,4 +23,5 @@
 
 {% endblock %}
 </html>
+
 

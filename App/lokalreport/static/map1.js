@@ -66,12 +66,20 @@ var data ={
   ]
 }
 
-var customPopup = "<h1>'+feature.properties.name+'</h1>, <p>'+feature.properties.vidsrc+'</p>'";
+//customPopup = "hi"
+ //, <iframe width="140" height="50 src="{{posts.Videolink}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+var Videotitel = '{{ posts.Title }}';
 
 var layerGroup = L.geoJSON(data, {
   onEachFeature: function (feature, layer) {
-    layer.bindPopup(customPopup);
+    layer.bindPopup('Videotitel');
   }
 }).addTo(mymap);
 
 //'<h1>'+feature.properties.name+'</h1>, <p>'+feature.properties.vidsrc+'</p>'
+
+//"<h1>"'+feature.properties.name+'"</h1>, <iframe width="220" height="150" src= "'+feature.properties.vidsrc+'"></iframe>";
+
